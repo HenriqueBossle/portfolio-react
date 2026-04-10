@@ -1,0 +1,56 @@
+/* ===== NAVBAR ===== */
+.navbar {
+  width: 100%;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(96, 165, 250, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar__list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 64px;
+}
+
+.navbar__item {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #94a3b8;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.navbar__item:hover {
+  color: #60a5fa;
+  background: rgba(96, 165, 250, 0.08);
+}
+
+.navbar__item--active {
+  color: #60a5fa;
+  background: rgba(96, 165, 250, 0.12);
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .navbar__list {
+    justify-content: center;
+    padding: 0 16px;
+    gap: 4px;
+  }
+
+  .navbar__item {
+    font-size: 0.875rem;
+    padding: 6px 12px;
+  }
+}
