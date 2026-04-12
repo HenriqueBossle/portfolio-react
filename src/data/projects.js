@@ -31,7 +31,7 @@ const projects = [
         deploy: "https://projeto2.vercel.app"
     },
     {
-        id: 3,
+        id: 4,
         title: "Projeto gadgsdhs2",
         description: "Descrição curta do projeto 2",
         image: "../assets/img/project2.jpg",
@@ -41,7 +41,7 @@ const projects = [
         deploy: "https://projeto2.vercel.app"
     },
     {
-        id: 3,
+        id: 5,
         title: "Projeto gadgsdhs2",
         description: "Descrição curta do projeto 2",
         image: "../assets/img/project2.jpg",
@@ -51,7 +51,7 @@ const projects = [
         deploy: "https://projeto2.vercel.app"
     },
     {
-        id: 3,
+        id: 6,
         title: "Projeto gadgsdhs2",
         description: "Descrição curta do projeto 2",
         image: "../assets/img/project2.jpg",
