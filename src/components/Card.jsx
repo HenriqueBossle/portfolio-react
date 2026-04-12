@@ -1,12 +1,10 @@
 import "./Card.css"
 import { useEffect, useRef, useState } from "react"
 import "../data/projects"
-import projects from "../data/projects"
 
-function Card({ index = 0, props }){
+function Card({ project, index = 0 }){
         const cardRef = useRef(null)
-        const proj = projectData
-
+    
         useEffect(() => {
             const observer = new IntersectionObserver(
                 ([entry]) => {
@@ -15,7 +13,7 @@ function Card({ index = 0, props }){
                         observer.disconnect()
                     }
                 },
-                { threshold: 0.9 }
+               { threshold: window.innerWidth < 768 ? 0.3 : 0.9 }
             )
 
             if(cardRef.current) observer.observe(cardRef.current)
@@ -31,9 +29,9 @@ function Card({ index = 0, props }){
                 ref={cardRef}>
                 <img className="card__image" src="../assets/img/me.jpg" alt="Henrique Bossle" />
                 <div className="card__content">
-                    <h3 className="card__title">{projects.title}</h3>
+                    <h3 className="card__title">{project.title}</h3>
                     <p className="card__description">Proj 1</p>
-                    <a className="card__link" href="#">Ver mais</a>
+                    <a className="card__link" href="../pages/Show.jsx">Ver mais</a>
                 </div>
             </div>
     )

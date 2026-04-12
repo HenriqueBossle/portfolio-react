@@ -20,6 +20,46 @@ const projects = [
         github: "https://github.com/seu-user/projeto2",
         deploy: "https://projeto2.vercel.app"
     },
+    {
+        id: 3,
+        title: "Projeto gadgsdhs2",
+        description: "Descrição curta do projeto 2",
+        image: "../assets/img/project2.jpg",
+        fullDescription: "Descrição completa do projeto 2...",
+        techs: ["React", "Tailwind"],
+        github: "https://github.com/seu-user/projeto2",
+        deploy: "https://projeto2.vercel.app"
+    },
+    {
+        id: 3,
+        title: "Projeto gadgsdhs2",
+        description: "Descrição curta do projeto 2",
+        image: "../assets/img/project2.jpg",
+        fullDescription: "Descrição completa do projeto 2...",
+        techs: ["React", "Tailwind"],
+        github: "https://github.com/seu-user/projeto2",
+        deploy: "https://projeto2.vercel.app"
+    },
+    {
+        id: 3,
+        title: "Projeto gadgsdhs2",
+        description: "Descrição curta do projeto 2",
+        image: "../assets/img/project2.jpg",
+        fullDescription: "Descrição completa do projeto 2...",
+        techs: ["React", "Tailwind"],
+        github: "https://github.com/seu-user/projeto2",
+        deploy: "https://projeto2.vercel.app"
+    },
+    {
+        id: 3,
+        title: "Projeto gadgsdhs2",
+        description: "Descrição curta do projeto 2",
+        image: "../assets/img/project2.jpg",
+        fullDescription: "Descrição completa do projeto 2...",
+        techs: ["React", "Tailwind"],
+        github: "https://github.com/seu-user/projeto2",
+        deploy: "https://projeto2.vercel.app"
+    },
 ]
 
 export default projects

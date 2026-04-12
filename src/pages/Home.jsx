@@ -58,12 +58,10 @@ function Home(){
             </header>
             <main className="main">
                 <h2 className="main__title">Conheça meus principais projetos</h2>
-                <Card index={0} projects={projects} />
-                <Card index={1}/>
-                <Card index={2}/>
-                <Card index={3}/>
-                <Card index={4}/>
-                <Card index={5}/>
+                {projects.map((project, index) => (
+                    <Card key={project.id} project={project} index={index} />
+                ))}
+   
             </main>
         </>
     )
