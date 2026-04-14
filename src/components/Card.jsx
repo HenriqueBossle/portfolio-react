@@ -28,10 +28,10 @@ function Card({ project, index = 0 }){
             <div
                 className={`card ${fromLeft ? "card--from-left" : "card--from-right"}`}
                 ref={cardRef}>
-                <img className="card__image" src="../assets/img/me.jpg" alt="Henrique Bossle" />
+                <img className="card__image" src={`${project.image}`} alt="Henrique Bossle" />
                 <div className="card__content">
                     <h3 className="card__title">{project.title}</h3>
-                    <p className="card__description">Proj 1</p>
+                    <p className="card__description">{project.description}</p>
                     <Link className="card__link" to={`/${project.id}`} >Ver mais</Link>
                 </div>
             </div>

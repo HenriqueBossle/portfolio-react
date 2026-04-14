@@ -1,14 +1,17 @@
 // src/data/projects.js — fonte única de dados
+
+import characters from "../assets/img/characterdata.png"
+
 const projects = [
     {
         id: 1,
-        title: "Projeto gffhgvjbhk 1",
-        description: "Descrição curta do projeto 1",
-        image: "../assets/img/project1.jpg",
-        fullDescription: "Descrição completa do projeto 1, explicando tudo que foi feito...",
-        techs: ["HTML", "CSS", "JavaScript"],
-        github: "https://github.com/seu-user/projeto1",
-        deploy: "https://projeto1.vercel.app"
+        title: "Characters Database",
+        description: "Aplicação web de gerenciamento de personagens, feita com Laravel e React JS.",
+        image: characters,
+        fullDescription: "CRUD completo de persoangens por API feita em Laravel e consumida com React. API hospeada no Render, React hospeado na Vercel, banco de dados remoto no Neon DB e imagens salvas na Cloudinary. O sistema é responsivo e também conta com autenticação de usuários",
+        techs: ["Laravel", "React"],
+        github: "https://github.com/HenriqueBossle/react-characters-front-end",
+        deploy: "https://react-characters-front-end.vercel.app/"
     },
     {
         id: 2,

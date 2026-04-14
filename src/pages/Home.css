@@ -64,6 +64,91 @@ body {
   margin-top: 20px;
 }
 
+/* ===== BUTTONS ===== */
+.header__buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.header__buttons button {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: #f8fafc;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.header__buttons button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+}
+
+/* Botões específicos */
+.btn-linkedin {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: #f8fafc;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  text-decoration: none;
+}
+
+.btn-linkedin:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+}
+
+.btn-github {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: #f8fafc;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  text-decoration: none;
+}
+
+.btn-github:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+}
+
+.btn-cv {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: #f8fafc;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  text-decoration: none;
+}
+
+.btn-cv:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+}
+
 /* ===== TECH BOX ===== */
 .header__tech {
   grid-column: 1 / 3;
@@ -127,6 +212,62 @@ body {
   font-size: 2rem;
   color: #60a5fa;
   margin-bottom: 30px;
+}
+
+/* ===== ABOUT (COM EFEITO DOS CARDS) ===== */
+.about {
+  background: rgba(30, 41, 59, 0.9);
+  border: 1px solid rgba(96, 165, 250, 0.15);
+  border-radius: 18px;
+  gap: 10px;
+  padding: 25px;
+  margin-bottom: 40px;
+
+  opacity: 0;
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease,
+    box-shadow 0.3s ease;
+}
+
+/* posição inicial */
+.about--from-left {
+  transform: translateX(-120px);
+}
+
+/* quando aparece */
+.about--visible {
+  opacity: 1;
+  transform: translateX(0);
+  box-shadow:
+    0 0 18px rgba(96, 165, 250, 0.35),
+    0 0 40px rgba(59, 130, 246, 0.15);
+  animation: glow-pulse 0.6s ease forwards;
+}
+
+.about:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.2);
+}
+
+.p-about{
+  margin: 20px;
+  color: #94a3b8;
+  font-size: large;
+}
+
+section, .main__title {
+  scroll-margin-top: 100px;
+}
+
+.about{
+  scroll-margin-top: 150px;
+}
+
+@keyframes glow-pulse {
+  0%   { box-shadow: 0 0 0px rgba(96, 165, 250, 0); }
+  50%  { box-shadow: 0 0 30px rgba(96, 165, 250, 0.6), 0 0 60px rgba(59, 130, 246, 0.3); }
+  100% { box-shadow: 0 0 18px rgba(96, 165, 250, 0.25), 0 0 40px rgba(59, 130, 246, 0.1); }
 }
 
 /* ===== RESPONSIVO ===== */
