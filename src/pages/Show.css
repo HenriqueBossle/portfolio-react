@@ -1,130 +1,166 @@
-/* ===== CONTAINER ===== */
-.show {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 30px;
-  background: rgba(30, 41, 59, 0.9);
-  border-radius: 24px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+/* ===== SHOW PAGE DARK PRO ===== */
+.show-wrapper {
+  padding: 40px 20px;
+  min-height: 100vh;
 }
 
-/* ===== TITLE ===== */
-.show__title {
-  font-size: 2.5rem;
-  color: #60a5fa;
+.show {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #0f172a; /* Slate 900 */
+  border: 1px solid #1e293b;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* ===== HEADER & TITLE ===== */
+.show__header {
+  padding: 40px 40px 20px;
   text-align: center;
-  margin-bottom: 25px;
+}
+
+.show__title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #f8fafc;
+  letter-spacing: -0.03em;
 }
 
 /* ===== IMAGE ===== */
+.show__image-container {
+  padding: 0 40px;
+}
+
 .show__image {
   width: 100%;
-  max-height: 400px;
+  max-height: 450px;
   object-fit: cover;
   border-radius: 20px;
-  border: 3px solid #3b82f6;
-  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
-  margin-bottom: 25px;
+  border: 1px solid #334155;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* ===== DESCRIPTION ===== */
+/* ===== CONTENT BOX ===== */
+.show__content {
+  padding: 40px;
+}
+
 .show__description {
-  font-size: 1.2rem;
-  color: #cbd5e1;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  text-align: center;
+  font-size: 1.15rem;
+  color: #94a3b8; /* Slate 400 */
+  line-height: 1.8;
+  margin-bottom: 40px;
+  text-align: justify;
 }
 
-/* ===== TECHS ===== */
+/* ===== TECHS (ESTILO BADGES) ===== */
 .show__techs {
-  background: linear-gradient(135deg, #1e3a8a, #334155);
-  padding: 20px;
-  border-radius: 18px;
-  border: 1px solid rgba(96, 165, 250, 0.3);
-  margin-bottom: 30px;
-  transition: 0.3s ease;
-}
-
-.show__techs:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.2);
+  background: rgba(30, 41, 59, 0.5);
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #1e293b;
+  margin-bottom: 40px;
 }
 
 .show__techs-title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #3b82f6;
+  margin-bottom: 20px;
   text-align: center;
-  color: #f8fafc;
-  margin-bottom: 15px;
 }
 
 .show__techs-list {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 12px;
   flex-wrap: wrap;
   list-style: none;
 }
 
 .show__techs-item {
-  background: rgba(59, 130, 246, 0.15);
-  padding: 8px 14px;
-  border-radius: 10px;
+  background: #1e293b;
+  padding: 8px 16px;
+  border-radius: 8px;
   color: #f8fafc;
+  font-size: 0.9rem;
   font-weight: 600;
-  border: 1px solid rgba(96, 165, 250, 0.3);
+  border: 1px solid #334155;
 }
 
 /* ===== BUTTONS ===== */
 .show__links {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 16px;
 }
 
 .show__btn {
-  padding: 12px 20px;
+  flex: 1;
+  max-width: 250px;
+  padding: 14px 24px;
   border-radius: 12px;
   text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
+  font-weight: 700;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .show__btn--github {
-  background: #1e293b;
+  background: transparent;
   color: #f8fafc;
   border: 1px solid #334155;
 }
 
 .show__btn--github:hover {
-  background: #334155;
+  background: #1e293b;
+  border-color: #94a3b8;
 }
 
 .show__btn--deploy {
-  background: #3b82f6;
-  color: #fff;
+  background: #2563eb;
+  color: #ffffff;
 }
 
 .show__btn--deploy:hover {
-  background: #2563eb;
+  background: #3b82f6;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+}
+
+/* ===== NOT FOUND ===== */
+.not-found {
+  text-align: center;
+  margin-top: 100px;
+  color: #ef4444;
 }
 
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
   .show {
-    margin: 20px;
-    padding: 20px;
+    border-radius: 0;
   }
+  
+  .show-wrapper { padding: 0; }
 
-  .show__title {
-    font-size: 2rem;
-  }
+  .show__header { padding: 30px 20px; }
 
-  .show__image {
-    max-height: 250px;
-  }
+  .show__title { font-size: 2rem; }
+
+  .show__image-container { padding: 0 20px; }
+
+  .show__content { padding: 30px 20px; }
 
   .show__links {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+  }
+
+  .show__btn {
+    max-width: 100%;
   }
 }

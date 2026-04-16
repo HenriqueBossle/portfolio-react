@@ -1,102 +1,107 @@
-/* ===== CARD ===== */
+/* ===== CARD DARK COM DESLIZE LATERAL ===== */
 .card {
   display: flex;
   align-items: center;
-  gap: 24px;
-
-  background: rgba(30, 41, 59, 0.9);
-  border: 1px solid rgba(96, 165, 250, 0.15);
-  border-radius: 18px;
-  padding: 20px;
-  margin-bottom: 20px;
-
+  gap: 30px;
+  background: #0f172a; /* Slate 900 */
+  border: 1px solid #1e293b;
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 24px;
+  
+  /* Estado inicial: Invisível */
   opacity: 0;
   transition:
-    transform 0.4s ease,
-    opacity 0.4s ease,
+    transform 0.7s cubic-bezier(0.25, 1, 0.5, 1),
+    opacity 0.7s ease,
+    border-color 0.3s ease,
     box-shadow 0.3s ease;
 }
 
-/* Posição inicial fora da tela */
+/* Posições iniciais (efeito de vir dos lados) */
 .card--from-left  { transform: translateX(-120px); }
-.card--from-right { transform: translateX( 120px); }
+.card--from-right { transform: translateX(120px); }
 
-/* Quando entra na tela */
+/* Quando entra na tela (Estado Final) */
 .card--visible {
   opacity: 1;
   transform: translateX(0);
-  box-shadow:
-    0 0 18px rgba(96, 165, 250, 0.35),
-    0 0 40px rgba(59, 130, 246, 0.15);
-  animation: glow-pulse 0.6s ease forwards;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
 }
 
-/* Pulso luminoso ao aparecer */
-@keyframes glow-pulse {
-  0%   { box-shadow: 0 0 0px rgba(96, 165, 250, 0); }
-  50%  { box-shadow: 0 0 30px rgba(96, 165, 250, 0.6), 0 0 60px rgba(59, 130, 246, 0.3); }
-  100% { box-shadow: 0 0 18px rgba(96, 165, 250, 0.25), 0 0 40px rgba(59, 130, 246, 0.1); }
-}
-
+/* Hover suave */
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.2);
+  transform: translateY(-5px);
+  border-color: #3b82f6;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
 }
 
 /* ===== IMAGEM ===== */
 .card__image {
-  width: 160px;
-  height: 120px;
+  width: 180px;
+  height: 130px;
   object-fit: cover;
   border-radius: 12px;
-  border: 2px solid rgba(96, 165, 250, 0.3);
+  border: 1px solid #1e293b;
   flex-shrink: 0;
 }
 
-/* ===== CONTEÚDO ===== */
+/* ===== CONTEÚDO (SEUS TEXTOS) ===== */
 .card__content {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .card__title {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #60a5fa;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f8fafc;
 }
 
 .card__description {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #94a3b8;
   line-height: 1.6;
 }
 
 .card__link {
   align-self: flex-start;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #f8fafc;
-  background: #1d4ed8;
-  padding: 8px 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: #2563eb;
+  padding: 10px 22px;
   border-radius: 8px;
   text-decoration: none;
-  transition: background 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .card__link:hover {
-  background: #2563eb;
+  background: #3b82f6;
+  transform: scale(1.05);
 }
 
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
   .card {
     flex-direction: column;
-    align-items: flex-start;
+    text-align: center;
+    /* No mobile, o slide lateral é menor para não quebrar o layout */
+    transform: translateY(40px) !important; 
+    padding: 20px;
+  }
+
+  .card--from-left, .card--from-right {
+    transform: translateY(40px);
   }
 
   .card__image {
     width: 100%;
-    height: 200px;
+    height: 180px;
+  }
+
+  .card__link {
+    align-self: center;
   }
 }

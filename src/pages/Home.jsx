@@ -4,37 +4,39 @@ import projects from "../data/projects"
 import "./Home.css"
 import { useEffect, useRef } from "react"
 import me from "../assets/img/me.jpeg"
+import Footer from "../components/Footer"
 
 function Home() {
   const techRef = useRef(null)
   const aboutRef = useRef(null)
   const projectsRef = useRef(null)
 
-  // Scroll suave
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth" })
   }
 
-  // Animação do "Sobre mim"
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          aboutRef.current.classList.add("about--visible")
-        }
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal--visible")
+          }
+        });
       },
-      { threshold: 0.4 }
+      { threshold: 0.2 }
     )
 
-    if (aboutRef.current) {
-      observer.observe(aboutRef.current)
-    }
+    const sections = [aboutRef.current, techRef.current, projectsRef.current]
+    sections.forEach(section => {
+      if (section) observer.observe(section)
+    })
 
     return () => observer.disconnect()
   }, [])
 
   return (
-    <>
+    <div className="app-wrapper dark-theme">
       <Navbar
         scrollToSection={scrollToSection}
         techRef={techRef}
@@ -43,104 +45,82 @@ function Home() {
       />
 
       <header className="header">
-        <img
-          className="header__photo"
-          src={me}
-          alt="Henrique Bossle"
-        />
+        <div className="header__main-info">
+          <img className="header__photo" src={me} alt="Henrique Bossle" />
 
-        <div className="header__info">
-          <h1 className="header__name">Henrique Bossle</h1>
-          <h2 className="header__role">Desenvolvedor Full-Stack</h2>
-          <h3 className="header__slogan">
-            Criando soluções digitais com design e resultado.
-          </h3>
+          <div className="header__text">
+            <h1 className="header__name">Henrique Bossle</h1>
+            <h2 className="header__role">Desenvolvedor Full-Stack</h2>
+            <p className="header__slogan">
+              Criando soluções digitais com design e resultado.
+            </p>
 
-          <div className="header__buttons">
-            <a
-              className="btn-linkedin"
-              href="https://www.linkedin.com/in/henrique-bossle-219b622b9/"
-              target="_blank"
-            >
-              LinkedIn
-            </a>
-
-            <a
-              className="btn-github"
-              href="https://github.com/HenriqueBossle"
-              target="_blank"
-            >
-              GitHub
-            </a>
-
-            <a className="btn-cv" href="../public/Curriculo - Henrique Bossle - Programador - FullStack (1).pdf">
-              Currículo em PDF
-            </a>
+            <div className="header__buttons">
+              <a className="btn btn--primary" href="https://www.linkedin.com/in/henrique-bossle-219b622b9/" target="_blank" rel="noreferrer">
+                LinkedIn
+              </a>
+              <a className="btn btn--secondary" href="https://github.com/HenriqueBossle" target="_blank" rel="noreferrer">
+                GitHub
+              </a>
+              <a className="btn btn--outline" href="../public/Curriculo - Henrique Bossle - Programador - FullStack (1).pdf" target="_blank">
+                Meu Curriculo
+              </a>
+            </div>
           </div>
         </div>
 
-        {/* TECNOLOGIAS */}
-        <div ref={techRef} className="header__tech">
-          <h3 className="header__tech-title">Tecnologias</h3>
-
-          <div className="header__tech-list">
+        <div ref={techRef} className="tech-bar">
+          <h3 className="tech-bar__title">Tecnologias</h3>
+          <div className="tech-bar__list">
             {[
-              "HTML",
-              "CSS",
-              "Tailwind",
-              "PHP",
-              "Laravel",
-              "JavaScript",
-              "React",
-              "Java",
-              "Docker",
+              "HTML", "CSS", "Tailwind", "PHP", "Laravel", "Java Script", "React", "Java", "MySQL", "Docker"
             ].map((tech, index) => (
-              <div key={index} className="header__tech-item">
-                <img src="../assets/img/me.jpg" alt={tech} />
-                <p>{tech}</p>
+              <div key={index} className="tech-bar__item">
+                {tech}
               </div>
             ))}
           </div>
         </div>
       </header>
 
-      <main className="main">
-        {/* SOBRE */}
-        <h3 className="main__title">Sobre mim</h3>
-
-        <div ref={aboutRef} className="about about--from-left">
-          <p className="p-about">
+      <main className="main-content">
+        <section ref={aboutRef} className="about-section reveal">
+          <h2 className="section-title">Sobre mim</h2>
+          <div className="about-card">
+<p className="p-text">
             Sou uma pessoa dedicada e em constante aprendizado, com interesse em
             desenvolvimento de sistemas e tecnologia.
           </p>
 
-          <p className="p-about">
+          <p className="p-text">
             Possuo conhecimentos em HTML, CSS, Bootstrap, Tailwind CSS, PHP,
             Laravel, JavaScript, React, Java, Spring Boot, APIs REST, CRUD, MVC
             e banco de dados como MySQL.
           </p>
 
-          <p className="p-about">
+          <p className="p-text">
             Também tenho noções de Docker, deploy e uso de ferramentas como
             Postman, Render e Neon DB.
           </p>
 
-          <p className="p-about">
+          <p className="p-text">
             Este site feito em React atua como um portfólio onde coloco meus
             principais projetos.
           </p>
-        </div>
+          </div>
+        </section>
 
-        {/* PROJETOS */}
-        <h2 ref={projectsRef} className="main__title">
-          Conheça meus principais projetos
-        </h2>
-
-        {projects.map((project, index) => (
-          <Card key={project.id} project={project} index={index} />
-        ))}
+        <section ref={projectsRef} className="projects-section">
+          <h2 className="section-title">Projetos Recentes</h2>
+          <div className="projects-grid">
+            {projects.map((project, index) => (
+              <Card key={project.id} project={project} index={index} />
+            ))}
+          </div>
+        </section>
       </main>
-    </>
+      <Footer />
+    </div>
   )
 }
 
