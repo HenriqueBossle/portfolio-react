@@ -73,7 +73,7 @@ function Home() {
           <h3 className="tech-bar__title">Tecnologias</h3>
           <div className="tech-bar__list">
             {[
-              "HTML", "CSS", "Tailwind", "PHP", "Laravel", "Java Script", "React", "Java", "MySQL", "Docker"
+              "HTML", "CSS", "Tailwind", "PHP", "Laravel", "Java Script", "React", "Java", "Ruby", "MySQL"
             ].map((tech, index) => (
               <div key={index} className="tech-bar__item">
                 {tech}
@@ -94,13 +94,17 @@ function Home() {
 
           <p className="p-text">
             Possuo conhecimentos em HTML, CSS, Bootstrap, Tailwind CSS, PHP,
-            Laravel, JavaScript, React, Java, Spring Boot, APIs REST, CRUD, MVC
+            Laravel, JavaScript, React, Java, Spring Boot, Kotlin, APIs REST, CRUD, MVC
             e banco de dados como MySQL.
           </p>
 
           <p className="p-text">
             Também tenho noções de Docker, deploy e uso de ferramentas como
             Postman, Render e Neon DB.
+          </p>
+
+          <p className="p-text">
+            Atualmente, estou me dedicando à criação de projetos React com consumo de APIs e, recentemente, comecei a estudar Ruby.
           </p>
 
           <p className="p-text">
@@ -111,7 +115,7 @@ function Home() {
         </section>
 
         <section ref={projectsRef} className="projects-section">
-          <h2 className="section-title">Projetos Recentes</h2>
+          <h2 className="section-title">Meus Projetos</h2>
           <div className="projects-grid">
             {projects.map((project, index) => (
               <Card key={project.id} project={project} index={index} />

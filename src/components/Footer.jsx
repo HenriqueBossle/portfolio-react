@@ -8,7 +8,9 @@ function Footer() {
       <div className="footer__container">
         <div className="footer__content">
           <p className="footer__copyright">
-            <span>&copy; Henrique Bossle | Programador Full-Stack</span> - {currentYear}
+            <span> &copy; Henrique Bossle | Programador Full-Stack</span>
+            <br />
+            {currentYear}
           </p>
           
           <div className="footer__socials">

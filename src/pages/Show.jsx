@@ -2,6 +2,9 @@ import { useParams } from "react-router-dom";
 import projects from "../data/projects";
 import "./Show.css";
 import NavbarShow from "../components/NavbarShow";
+import Footer from "../components/Footer";
+import { useEffect } from "react";
+
 
 function Show(){
     const { id } = useParams();
@@ -11,6 +14,10 @@ function Show(){
     if(!project){
         return <h1 className="not-found">Projeto não encontrado</h1>
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return(
         <>
@@ -44,13 +51,16 @@ function Show(){
                             Repositório no GitHub
                         </a>
 
-                        <a className="show__btn show__btn--deploy" href={project.deploy} target="_blank" rel="noreferrer">
-                            Deploy
-                        </a>
+                        {project.deploy && (  
+                            <a className="show__btn show__btn--deploy" href={project.deploy} target="_blank" rel="noreferrer">
+                                Deploy
+                            </a>
+                        ) }
                     </div>
                 </div>
             </div>
         </div>
+        <Footer />
          </>
     )
 }
