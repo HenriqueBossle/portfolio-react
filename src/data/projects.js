@@ -34,7 +34,7 @@ const projects = [
         title: "Fiction Grid",
         description: "Outro sistema de gerenciamento de personagens feito somente com Laravel.",
         image: fictionGrid,
-        fullDescription: "Aplicação web de gerenciamento de personagens com CRUD completo feito em Laravel, estilizado com Tailwind CSS e autenticação de usuários. O banco de dados foi hospedado no Neon DB e o projeto no Render.",
+        fullDescription: "Aplicação web feita em Laravel de gerenciamento de personagens com CRUD completo, filtro por franquia do personagens, estilização com Tailwind CSS e autenticação de usuários. O banco de dados foi hospedado no Neon DB e o projeto no Render.",
         techs: ["Laravel", "Tailwind CSS", "Neon DB"],
         github: "https://github.com/HenriqueBossle/fiction_grid",
         deploy: "https://fiction-grid-1.onrender.com/"
