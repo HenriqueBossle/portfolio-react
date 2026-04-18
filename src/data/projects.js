@@ -2,6 +2,9 @@
 
 import characters from "../assets/img/characterdata.png"
 import clienteObra from "../assets/img/clienteobra.png"
+import fictionGrid from "../assets/img/fictiongrid.png"
+import portifolio from "../assets/img/potfolio1.png"
+import hqhero from "../assets/img/hq_hero_image.png"
 
 const projects = [
     {
@@ -17,43 +20,42 @@ const projects = [
     {
         id: 2,
         title: "Cliente Obra",
-        description: "Sistema de gerenciamente de obras de construção civil feito com Laravel",
+        description: "Sistema de gerenciamento de obras de construção civil feito com Laravel e estilizado com Tailwind CSS.",
         image: clienteObra,
         fullDescription: "Sistema de gestão e organização de clientes de obras de construção civil. O software feito em Laravel conta com CRUD completo, autenticação de usuarios, geração de PDF de todos os regsitros ou de um registro só e pesquisa por filtro.",
-        techs: ["Laravel"],
+        techs: ["Laravel", "Tailwind CSS"],
         github: "https://github.com/seu-user/projeto2",
-        deploy: "https://projeto2.vercel.app"
+       
 
     },
     {
         id: 3,
-        title: "Projeto gadgsdhs2",
-        description: "Descrição curta do projeto 2",
-        image: "../assets/img/project2.jpg",
-        fullDescription: "Descrição completa do projeto 2...",
-        techs: ["React", "Tailwind"],
-        github: "https://github.com/seu-user/projeto2",
-        deploy: "https://projeto2.vercel.app"
+        title: "Fiction Grid",
+        description: "Outro sistema de gerenciamento de personagens feito somente com Laravel.",
+        image: fictionGrid,
+        fullDescription: "Aplicação web de gerenciamento de personagens com CRUD completo feito em Laravel, estilizado com Tailwind CSS e autenticação de usuários",
+        techs: ["React", "Tailwind CSS"],
+        github: "https://github.com/HenriqueBossle/fiction_grid",
+        deploy: "https://fiction-grid-1.onrender.com/"
     },
     {
         id: 4,
-        title: "Projeto gadgsdhs2",
-        description: "Descrição curta do projeto 2",
-        image: "../assets/img/project2.jpg",
-        fullDescription: "Descrição completa do projeto 2...",
-        techs: ["React", "Tailwind"],
-        github: "https://github.com/seu-user/projeto2",
-        deploy: "https://projeto2.vercel.app"
+        title: "Meu primeiro portfólio",
+        description: "Portfólio feito com HTML e Tailwind CSS.",
+        image: portifolio,
+        fullDescription: "Meu primeiro portfólio foi feito com HTML e estilizado com Tailwind CSS, construído para mostrar alguns dos meus projetos, feitos principalmente com Laravel e PHP.",
+        techs: ["HTML", "Tailwind CSS"],
+        github: "https://github.com/HenriqueBossle/meu-portifolio-html/tree/main",
+        deploy: "https://meu-portifolio-html-kappa.vercel.app/"
     },
     {
         id: 5,
-        title: "Projeto gadgsdhs2",
-        description: "Descrição curta do projeto 2",
-        image: "../assets/img/project2.jpg",
-        fullDescription: "Descrição completa do projeto 2...",
-        techs: ["React", "Tailwind"],
-        github: "https://github.com/seu-user/projeto2",
-        deploy: "https://projeto2.vercel.app"
+        title: "HQ Hero",
+        description: "Aplicação web em Laravel de organização de HQs de super-heróis.",
+        image: hqhero,
+        fullDescription: "Site de gerenciamento de HQs feito com Laravel 12. Possui pesquisa com filtro e relação entre as tabelas categoria e HQ.",
+        techs: ["Laravel", "Tailwind"],
+        github: "https://github.com/HenriqueBossle/gerenciador-de-comics"
     },
     {
         id: 6,

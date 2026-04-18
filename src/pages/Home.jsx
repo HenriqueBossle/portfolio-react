@@ -88,9 +88,9 @@ function Home() {
           <h2 className="section-title">Sobre mim</h2>
           <div className="about-card">
 <p className="p-text">
-            Sou uma pessoa dedicada e em constante aprendizado, com interesse em
-            desenvolvimento de sistemas e tecnologia.
+  Me chamo Henrique Gonçalves Bossle, sou estudante de Análise e Desenvolvimento de Sistemas e, atualmente, estou no 5º semestre do curso.
           </p>
+          <p className="p-text">Gosto muito de estudar e aprender mais sobre o maravilhoso mundo da tecnologia e da programação. Tenho interesse principalmente no desenvolvimento de sites e sistemas web</p>
 
           <p className="p-text">
             Possuo conhecimentos em HTML, CSS, Bootstrap, Tailwind CSS, PHP,
