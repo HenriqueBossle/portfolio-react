@@ -63,7 +63,7 @@ function Home() {
                 GitHub
               </a>
               <a className="btn btn--outline" href="../Curriculo - Henrique Bossle - Programador - FullStack (1).pdf" target="_blank">
-                Meu Curriculo
+                Meu Curriculo 
               </a>
             </div>
           </div>
