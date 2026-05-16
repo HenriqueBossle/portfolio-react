@@ -46,7 +46,7 @@ const projects = [
         description: "Aplicação web de gerenciamento de personagens, feita com Laravel e React JS.",
         image: characters,
         fullDescription: "CRUD completo de personagens por API feita em Laravel e consumida com React. API hospedada no Render, React hospeado na Vercel, banco de dados remoto no Neon DB e imagens salvas na Cloudinary. O sistema é responsivo e também conta com autenticação de usuários",
-        techs: ["Laravel", "React", "Neon DB", "Cloudinary"],
+        techs: ["Laravel", "React", "Render", "Neon DB", "Cloudinary"],
         github: "https://github.com/HenriqueBossle/react-characters-front-end",
         deploy: "https://react-characters-front-end.vercel.app/"
     },
