@@ -14,7 +14,7 @@ const projects = [
     {
         id: 1,
         title: "Comic Vault",
-        description: "Sistema para gerenciar minhas HQs de super-herois feito com Ruby On Rails",
+        description: "Sistema para gerenciar minhas HQs de super-herois feito com Ruby On Rails.",
         image: comicvault,
         fullDescription: "Meu segundo sistema web de gestão de HQs, desta vez fiz para aprendizado sobre Ruby On Rails. O software está hospedado no Render e seu banco de dados no Neon DB como de costume e conta com CRUD completo de HQs e franquias, filtro por todos os campos de tabela, ordenação por número de edição e por franquia, autenticação de usuários e upload de imagens salvas no Cloudinary.",
         techs: ["Ruby On Rails", "Neon DB", "Cloudinary", "Render"],
