@@ -62,7 +62,7 @@ function Home() {
               <a className="btn btn--secondary" href="https://github.com/HenriqueBossle" target="_blank" rel="noreferrer">
                 GitHub
               </a>
-              <a className="btn btn--outline" href="../Curriculo - Henrique Bossle - Programador - FullStack (1).pdf" target="_blank">
+              <a className="btn btn--outline" href="../Curriculo novo - Full-Stack (2).pdf" target="_blank">
                 Meu Curriculo 
               </a>
             </div>
@@ -94,7 +94,7 @@ function Home() {
 
           <p className="p-text">
             Possuo conhecimentos em HTML, CSS, Bootstrap, Tailwind CSS, PHP,
-            Laravel, JavaScript, React, Java, Spring Boot, Kotlin, APIs REST, CRUD, MVC
+            Laravel, JavaScript, React, Java, Spring Boot, C, C++, Kotlin, Ruby, RubyOnRails, APIs REST, CRUD, MVC
             e banco de dados como MySQL.
           </p>
 
@@ -104,7 +104,7 @@ function Home() {
           </p>
 
           <p className="p-text">
-            Atualmente, estou me dedicando à criação de projetos React com consumo de APIs e, recentemente, comecei a estudar Ruby e Ruby On Rails.
+            Atualmente, estou me dedicando à criação APIs Laravel com consumo em React e, recentemente venho estudando a criação de projetos baseados em Agentes de IA.
           </p>
 
           <p className="p-text">

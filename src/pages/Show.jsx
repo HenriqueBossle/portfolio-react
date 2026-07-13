@@ -47,9 +47,10 @@ function Show(){
                     </div>
 
                     <div className="show__links">
-                        <a className="show__btn show__btn--github" href={project.github} target="_blank" rel="noreferrer">
+                        {project.github && (<a className="show__btn show__btn--github" href={project.github} target="_blank" rel="noreferrer">
                             Repositório no GitHub
                         </a>
+                    )}
 
                         {project.deploy && (  
                             <a className="show__btn show__btn--deploy" href={project.deploy} target="_blank" rel="noreferrer">

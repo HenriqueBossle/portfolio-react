@@ -9,10 +9,20 @@ import gerenciador from "../assets/img/gerenciadorobras.png"
 import rubycrud from "../assets/img/crudruby.png"
 import carouselcharacters from "../assets/img/carouselcharacters.png"
 import comicvault from "../assets/img/comicvault.png"
+import clienteObra3 from "../assets/img/clienteObra3.png"
 
 const projects = [
     {
         id: 1,
+        title: "ClienteObra",
+        description: "Terceito sistema para gestão de obras, desta vez com deploy completo.",
+        image: clienteObra3,
+        fullDescription: "Terceiro sistema que fiz para gestão de clientes de construção civil, consiste em uma aplicação web com back-end em Laravel e front-end em React JS. O software conta com CRUD completo para registro de clientes, autenticação e separação de usuários, geração de pdf de um ou de todos os registros, filtro e pesquisa por obra, envio de email para cadastro e recuperação de conta e edição e exclusão de conta. O deploy foi feito com Render e Vercel e o sistema já está disponível para uso real.",
+        techs: ["React", "Laravel", "Dompdf", "Brevo", "Neon DB", "Render"],
+        deploy: "https://cliente-obra-api2-frontend.vercel.app/"
+    },
+    {
+        id: 2,
         title: "Comic Vault",
         description: "Sistema para gerenciar minhas HQs de super-herois feito com Ruby On Rails.",
         image: comicvault,
@@ -22,7 +32,7 @@ const projects = [
         deploy: "https://ruby-on-rails-comic-vault.onrender.com/"
     },
     {
-        id: 2,
+        id: 3,
         title: "Carousel de Personagens",
         description: "Página web de carrossel feita com React.",
         image: carouselcharacters,
@@ -32,7 +42,7 @@ const projects = [
         deploy: "https://react-characters-carousel.vercel.app/"
     },
     {
-        id: 3,
+        id: 4,
         title: "CRUD com Ruby",
         description: "CRUD simples feito para estudar a linguagem Ruby.",
         image: rubycrud,
@@ -41,7 +51,7 @@ const projects = [
         github: "https://github.com/HenriqueBossle/my-first-ruby-crud/tree/main",
     },
     {
-        id: 4,
+        id: 5,
         title: "Characters Database",
         description: "Aplicação web de gerenciamento de personagens, feita com Laravel e React JS.",
         image: characters,
@@ -51,18 +61,18 @@ const projects = [
         deploy: "https://react-characters-front-end.vercel.app/"
     },
     {
-        id: 5,
+        id: 6,
         title: "Cliente Obra",
         description: "Sistema de gerenciamento de obras de construção civil feito com Laravel e estilizado com Tailwind CSS.",
         image: clienteObra,
         fullDescription: "Sistema de gestão e organização de clientes de obras de construção civil. O software feito em Laravel conta com CRUD completo, autenticação de usuarios, geração de PDF de todos os regsitros ou de um registro só e pesquisa por filtro.",
-        techs: ["Laravel", "Tailwind CSS", "MySQL"],
+        techs: ["Laravel", "Dompdf","Tailwind CSS", "MySQL"],
         github: "https://github.com/HenriqueBossle/ClienteObra",
        
 
     },
     {
-        id: 6,
+        id: 7,
         title: "Fiction Grid",
         description: "Outro sistema de gerenciamento de personagens feito somente com Laravel.",
         image: fictionGrid,
@@ -72,7 +82,7 @@ const projects = [
         deploy: "https://fiction-grid-1.onrender.com/"
     },
     {
-        id: 7,
+        id: 8,
         title: "Meu primeiro portfólio",
         description: "Portfólio feito com HTML e Tailwind CSS.",
         image: portifolio,
@@ -82,7 +92,7 @@ const projects = [
         deploy: "https://meu-portifolio-html-kappa.vercel.app/"
     },
     {
-        id: 8,
+        id: 9,
         title: "HQ Hero",
         description: "Aplicação web em Laravel sobre HQs de super-heróis.",
         image: hqhero,
@@ -91,12 +101,12 @@ const projects = [
         github: "https://github.com/HenriqueBossle/gerenciador-de-comics"
     },
     {
-        id: 9,
+        id: 10,
         title: "Gerenciador de Obras",
         description: "Meu primeiro sistema de gestão de clientes de construção civil.",
         image: gerenciador,
         fullDescription: "Aplicação web de CRUD completo feita com Laravel 11. Possui gerador de PDF, pesquisa com filtro e autenticação com Laravel.",
-        techs: ["Laravel", "Tailwind", "MySQL"],
+        techs: ["Laravel", "Dompdf", "Tailwind", "MySQL"],
         github: "https://github.com/HenriqueBossle/sistema-cadastro-obras",
     },
 ]
