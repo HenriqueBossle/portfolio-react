@@ -73,7 +73,7 @@ function Home() {
           <h3 className="tech-bar__title">Tecnologias</h3>
           <div className="tech-bar__list">
             {[
-              "HTML", "CSS", "Tailwind", "PHP", "Laravel", "Java Script", "React", "Java", "Ruby", "Ruby On Rails", "MySQL"
+              "HTML", "CSS", "Tailwind", "PHP", "Laravel", "JavaScript", "React", "Java", "Ruby", "Ruby On Rails", "MySQL"
             ].map((tech, index) => (
               <div key={index} className="tech-bar__item">
                 {tech}
