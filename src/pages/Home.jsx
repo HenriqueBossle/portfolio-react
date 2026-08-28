@@ -62,7 +62,7 @@ function Home() {
               <a className="btn btn--secondary" href="https://github.com/HenriqueBossle" target="_blank" rel="noreferrer">
                 GitHub
               </a>
-              <a className="btn btn--outline" href="../Curriculo novo - Full-Stack (2).pdf" target="_blank">
+              <a className="btn btn--outline" href="../Curriculo_Henrique_Bossle_FullStack.pdf" target="_blank">
                 Meu Curriculo 
               </a>
             </div>
@@ -73,7 +73,7 @@ function Home() {
           <h3 className="tech-bar__title">Tecnologias</h3>
           <div className="tech-bar__list">
             {[
-              "HTML", "CSS", "Tailwind", "PHP", "Laravel", "JavaScript", "React", "Java", "Ruby", "Ruby On Rails", "MySQL"
+              "PHP", "Laravel", "React", "MySQL"
             ].map((tech, index) => (
               <div key={index} className="tech-bar__item">
                 {tech}
@@ -87,31 +87,24 @@ function Home() {
         <section ref={aboutRef} className="about-section reveal">
           <h2 className="section-title">Sobre mim</h2>
           <div className="about-card">
+<p className="p-text">   Me chamo Henrique Gonçalves Bossle,  sou estudante de Análise e Desenvolvimento de Sistemas e, atualmente, estou no 5º semestre do curso. </p>
+
 <p className="p-text">
-  Me chamo Henrique Gonçalves Bossle, sou estudante de Análise e Desenvolvimento de Sistemas e, atualmente, estou no 5º semestre do curso.
-          </p>
-          <p className="p-text">Gosto muito de estudar e aprender mais sobre o maravilhoso mundo da tecnologia e da programação. Tenho interesse principalmente no desenvolvimento de sites e sistemas web</p>
+  Sou apaixonado por tecnologia e programação e tenho como principal objetivo atuar como desenvolvedor Full Stack, criando aplicações web completas, desde o desenvolvimento do backend até a construção de interfaces modernas e responsivas.
+</p>
 
-          <p className="p-text">
-            Possuo conhecimentos em HTML, CSS, Bootstrap, Tailwind CSS, PHP,
-            Laravel, JavaScript, React, Java, Spring Boot, C, C++, Kotlin, Ruby, RubyOnRails, APIs REST, CRUD, MVC
-            e banco de dados como MySQL.
-          </p>
+<p className="p-text">   Tenho como principais tecnologias PHP e Laravel para desenvolvimento de APIs, regras de negócio, autenticação, CRUDs e aplicações seguindo padrões como MVC. No frontend, utilizo principalmente React, JavaScript, HTML, CSS, Bootstrap e Tailwind CSS para criar interfaces dinâmicas e integradas às APIs. </p>
 
-          <p className="p-text">
-            Também tenho noções de Docker, deploy e uso de ferramentas como
-            Postman, Render e Neon DB.
-          </p>
+<p className="p-text">
+  Também possuo conhecimentos em bancos de dados, principalmente MySQL, além de experiência com APIs REST, Git, Docker, Postman, deploy e ferramentas como Render e Neon DB.
+</p>
 
-          <p className="p-text">
-            Atualmente, estou me dedicando à criação APIs Laravel com consumo em React e, recentemente venho estudando a criação de projetos baseados em Agentes de IA.
-          </p>
+<p className="p-text">   Atualmente, estou me aprofundando no desenvolvimento Full Stack com PHP, Laravel e React, buscando aprimorar minhas habilidades na construção de sistemas completos, seguros e bem estruturados. </p>
 
-          <p className="p-text">
-            Este site feito em React atua como um portfólio onde coloco meus
-            principais projetos.
-          </p>
-          </div>
+<p className="p-text">
+  Este site foi desenvolvido em React e funciona como meu portfólio, onde apresento alguns dos principais projetos que desenvolvi durante minha jornada de aprendizado e evolução como desenvolvedor.
+</p>
+</div>
         </section>
 
         <section ref={projectsRef} className="projects-section">

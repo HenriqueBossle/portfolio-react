@@ -13,7 +13,7 @@ import clienteObra3 from "../assets/img/clienteObra3.png"
 import summarizeText from "../assets/img/textsummary.png"
 
 const projects = [
-    {
+    /*{
         id: 1,
         title: "Summarize Text",
         description: "Aplicação web local com IA para resumir textos.",
@@ -21,9 +21,9 @@ const projects = [
         fullDescription: "Aplicação em PHP que utiliza a biblioteca Transformers PHP para gerar resumos automáticos de textos usando modelos de linguagem localmente, sem depender de APIs externas. Estilizado com Tailwind CSS, o projeto foi feito para estudos de uso de IA local com PHP.",
         techs: ["PHP", "Transformers PHP", "Tailwind CSS"],
         github: "https://github.com/HenriqueBossle/text-summarization-php"
-    },
+    },*/
     {
-        id: 2,
+        id: 1,
         title: "ClienteObra",
         description: "Terceiro sistema para gestão de obras, desta vez com deploy completo.",
         image: clienteObra3,
@@ -32,7 +32,7 @@ const projects = [
         deploy: "https://cliente-obra-api2-frontend.vercel.app/"
     },
     {
-        id: 3,
+        id: 2,
         title: "Comic Vault",
         description: "Sistema para gerenciar minhas HQs de super-herois feito com Ruby On Rails.",
         image: comicvault,
@@ -41,7 +41,7 @@ const projects = [
         github: "https://github.com/HenriqueBossle/ruby-on-rails-comic-vault/tree/main",
         deploy: "https://ruby-on-rails-comic-vault.onrender.com/"
     },
-    {
+    /*{
         id: 4,
         title: "Carousel de Personagens",
         description: "Página web de carrossel feita com React.",
@@ -50,18 +50,18 @@ const projects = [
         techs: ["React", "Laravel", "Neon DB", "Cloudinary"],
         github: "https://github.com/HenriqueBossle/react-characters-carousel",
         deploy: "https://react-characters-carousel.vercel.app/"
-    },
-    {
-        id: 5,
+    },*/
+    /*{
+        id: ,
         title: "CRUD com Ruby",
         description: "CRUD simples feito para estudar a linguagem Ruby.",
         image: rubycrud,
         fullDescription: "Aplicação simples de CRUD desenvolvida com Ruby puro, utilizando banco de dados hospedado no Neon DB. A visualização é feita via terminal e a aplicação foi containerizada com Docker para aprimorar meus conhecimentos nessas ferramentas.",
         techs: ["Ruby", "Docker", "Neon DB"],
         github: "https://github.com/HenriqueBossle/my-first-ruby-crud/tree/main",
-    },
+    },*/
     {
-        id: 6,
+        id: 3,
         title: "Characters Database",
         description: "Aplicação web de gerenciamento de personagens, feita com Laravel e React JS.",
         image: characters,
@@ -71,7 +71,7 @@ const projects = [
         deploy: "https://react-characters-front-end.vercel.app/"
     },
     {
-        id: 7,
+        id: 4,
         title: "Cliente Obra",
         description: "Sistema de gerenciamento de obras de construção civil feito com Laravel e estilizado com Tailwind CSS.",
         image: clienteObra,
@@ -82,7 +82,7 @@ const projects = [
 
     },
     {
-        id: 8,
+        id: 5,
         title: "Fiction Grid",
         description: "Outro sistema de gerenciamento de personagens feito somente com Laravel.",
         image: fictionGrid,
@@ -92,7 +92,7 @@ const projects = [
         deploy: "https://fiction-grid-1.onrender.com/"
     },
     {
-        id: 9,
+        id: 6,
         title: "Meu primeiro portfólio",
         description: "Portfólio feito com HTML e Tailwind CSS.",
         image: portifolio,
@@ -102,7 +102,7 @@ const projects = [
         deploy: "https://meu-portifolio-html-kappa.vercel.app/"
     },
     {
-        id: 10,
+        id: 7,
         title: "HQ Hero",
         description: "Aplicação web em Laravel sobre HQs de super-heróis.",
         image: hqhero,
@@ -111,7 +111,7 @@ const projects = [
         github: "https://github.com/HenriqueBossle/gerenciador-de-comics"
     },
     {
-        id: 11,
+        id: 8,
         title: "Gerenciador de Obras",
         description: "Meu primeiro sistema de gestão de clientes de construção civil.",
         image: gerenciador,
