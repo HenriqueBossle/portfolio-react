@@ -30,3 +30,27 @@
 @media (min-width: 761px) {
   .project-scene { min-height: 110vh; }
 }
+
+@media (max-width: 760px) {
+  .card {
+    height: auto;
+    justify-content: flex-start;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (max-width: 760px) {
+    .project-scene {
+      view-timeline-name: --project-scene;
+      view-timeline-axis: block;
+    }
+
+    .card__image,
+    .card__link {
+      opacity: 0;
+      animation: project-media-reveal both;
+      animation-timeline: --project-scene;
+      animation-range: entry 0% entry 30%;
+    }
+  }
+}
