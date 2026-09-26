@@ -1,107 +1,32 @@
-/* ===== CARD DARK COM DESLIZE LATERAL ===== */
-.card {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  background: #0f172a; /* Slate 900 */
-  border: 1px solid #1e293b;
-  border-radius: 20px;
-  padding: 24px;
-  margin-bottom: 24px;
-  
-  /* Estado inicial: Invisível */
-  opacity: 0;
-  transition:
-    transform 0.7s cubic-bezier(0.25, 1, 0.5, 1),
-    opacity 0.7s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
+.projects-grid{counter-reset:project-index}.project-scene{position:relative;min-height:280vh}.card{counter-increment:project-index}.card{position:sticky;top:72px;height:calc(100vh - 72px);display:flex;align-items:center;justify-content:space-between;gap:clamp(28px,7vw,100px);min-height:calc(100vh - 72px);padding:clamp(22px,5vw,74px);margin:0;background:linear-gradient(125deg,rgba(11,13,36,.98),rgba(8,10,28,.9));border:1px solid rgba(0,245,255,.18);border-radius:2px;box-shadow:0 22px 65px rgba(0,0,0,.34);opacity:1;transform:none;transition:border-color .35s,box-shadow .35s;animation:project-enter both;animation-timeline:view();animation-range:entry 0% exit 100%}.card--from-left{flex-direction:row-reverse}.card:hover{border-color:rgba(0,245,255,.5);box-shadow:0 20px 55px rgba(0,245,255,.08),0 25px 70px rgba(178,107,255,.08)}@keyframes project-enter{0%{opacity:0;translate:0 40px}35%,70%{opacity:1;translate:0 0}100%{opacity:0;translate:0 -30px}}.card__image{width:min(56%,680px);height:min(61vh,620px);object-fit:cover;border-radius:1px;border:1px solid rgba(0,245,255,.26);box-shadow:0 0 40px rgba(0,245,255,.09),0 0 65px rgba(178,107,255,.08);flex-shrink:0;scale:.94;animation:project-image both;animation-timeline:view();animation-range:entry 0% cover 100%}@keyframes project-image{0%{scale:.94}50%{scale:1}100%{scale:.96}}.card__content{display:flex;flex-direction:column;align-items:flex-start;gap:18px;max-width:410px}.card__content:before{content:'PROJETO / ' counter(project-index,decimal-leading-zero);font-size:.65rem;font-weight:600;letter-spacing:.2em;color:var(--text-muted)}.card__title{font-family:'Fraunces',serif;font-size:clamp(2rem,4vw,4rem);font-weight:400;letter-spacing:-.035em;color:#f2f4fb}.card__description{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.1rem,1.7vw,1.45rem);line-height:1.55;background:linear-gradient(100deg,var(--neon-cyan),var(--neon-violet));background-clip:text;-webkit-background-clip:text;color:transparent}.card__link{align-self:flex-start;margin-top:12px;padding:14px 20px;border:1px solid var(--neon-cyan);color:var(--neon-cyan);font-size:.8rem;letter-spacing:.08em;text-decoration:none;transition:background .25s,color .25s,box-shadow .25s}.card__link:hover{background:var(--neon-cyan);color:#06071a;box-shadow:0 0 25px rgba(0,245,255,.25)}.card--visible{opacity:1;transform:none}.card--from-left,.card--from-right{transform:none}@media(max-width:760px){.project-scene{min-height:0}.card,.card:nth-child(even){position:relative;top:auto;min-height:0;flex-direction:column;padding:20px;margin-bottom:22px;gap:22px;animation:none}.card__image{width:100%;height:auto;max-height:280px;aspect-ratio:16/10;scale:1;animation:none}.card__content{max-width:none;gap:12px}.card__title{font-size:2rem}.card__link{margin-top:3px}.projects-section{opacity:1;transform:none}}@media(prefers-reduced-motion:reduce){.card,.card__image{animation:none!important;scale:1!important}}
+
+/* Fallback: mantenha os projetos visíveis em navegadores sem scroll timelines. */
+@supports not (animation-timeline: view()) {
+  .card { animation: none; opacity: 1; transform: none; translate: 0 0; }
+  .card__image { animation: none; scale: 1; }
 }
 
-/* Posições iniciais (efeito de vir dos lados) */
-.card--from-left  { transform: translateX(-120px); }
-.card--from-right { transform: translateX(120px); }
+@supports (animation-timeline: view()) {
+  @media (min-width: 761px) {
+    .project-scene {
+      view-timeline-name: --project-scene;
+      view-timeline-axis: block;
+    }
 
-/* Quando entra na tela (Estado Final) */
-.card--visible {
-  opacity: 1;
-  transform: translateX(0);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-}
-
-/* Hover suave */
-.card:hover {
-  transform: translateY(-5px);
-  border-color: #3b82f6;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
-}
-
-/* ===== IMAGEM ===== */
-.card__image {
-  width: 180px;
-  height: 130px;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 1px solid #1e293b;
-  flex-shrink: 0;
-}
-
-/* ===== CONTEÚDO (SEUS TEXTOS) ===== */
-.card__content {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.card__title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #f8fafc;
-}
-
-.card__description {
-  font-size: 1rem;
-  color: #94a3b8;
-  line-height: 1.6;
-}
-
-.card__link {
-  align-self: flex-start;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #ffffff;
-  background: #2563eb;
-  padding: 10px 22px;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.card__link:hover {
-  background: #3b82f6;
-  transform: scale(1.05);
-}
-
-/* ===== RESPONSIVO ===== */
-@media (max-width: 768px) {
-  .card {
-    flex-direction: column;
-    text-align: center;
-    /* No mobile, o slide lateral é menor para não quebrar o layout */
-    transform: translateY(40px) !important; 
-    padding: 20px;
+    .card__image,
+    .card__link {
+      opacity: 0;
+      animation: project-media-reveal both;
+      animation-timeline: --project-scene;
+      animation-range: entry 80% entry 100%;
+    }
   }
+}
 
-  .card--from-left, .card--from-right {
-    transform: translateY(40px);
-  }
+@keyframes project-media-reveal {
+  to { opacity: 1; }
+}
 
-  .card__image {
-    width: 100%;
-    height: 180px;
-  }
-
-  .card__link {
-    align-self: center;
-  }
+@media (min-width: 761px) {
+  .project-scene { min-height: 110vh; }
 }

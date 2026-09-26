@@ -24,7 +24,7 @@ function Home() {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0 }
     )
 
     const sections = [aboutRef.current, techRef.current, projectsRef.current]
@@ -75,7 +75,7 @@ function Home() {
             {[
               "PHP", "Laravel", "React", "MySQL"
             ].map((tech, index) => (
-              <div key={index} className="tech-bar__item">
+              <div key={index} className="tech-bar__item" style={{ "--badge-index": index }}>
                 {tech}
               </div>
             ))}
@@ -87,23 +87,16 @@ function Home() {
         <section ref={aboutRef} className="about-section reveal">
           <h2 className="section-title">Sobre mim</h2>
           <div className="about-card">
-<p className="p-text">   Me chamo Henrique Gonçalves Bossle,  sou estudante de Análise e Desenvolvimento de Sistemas e, atualmente, estou no 5º semestre do curso. </p>
-
-<p className="p-text">
-  Sou apaixonado por tecnologia e programação e tenho como principal objetivo atuar como desenvolvedor Full Stack, criando aplicações web completas, desde o desenvolvimento do backend até a construção de interfaces modernas e responsivas.
-</p>
-
-<p className="p-text">   Tenho como principais tecnologias PHP e Laravel para desenvolvimento de APIs, regras de negócio, autenticação, CRUDs e aplicações seguindo padrões como MVC. No frontend, utilizo principalmente React, JavaScript, HTML, CSS, Bootstrap e Tailwind CSS para criar interfaces dinâmicas e integradas às APIs. </p>
-
-<p className="p-text">
-  Também possuo conhecimentos em bancos de dados, principalmente MySQL, além de experiência com APIs REST, Git, Docker, Postman, deploy e ferramentas como Render e Neon DB.
-</p>
-
-<p className="p-text">   Atualmente, estou me aprofundando no desenvolvimento Full Stack com PHP, Laravel e React, buscando aprimorar minhas habilidades na construção de sistemas completos, seguros e bem estruturados. </p>
-
-<p className="p-text">
-  Este site foi desenvolvido em React e funciona como meu portfólio, onde apresento alguns dos principais projetos que desenvolvi durante minha jornada de aprendizado e evolução como desenvolvedor.
-</p>
+            <div className="about-card__column">
+              <p className="p-text">Me chamo Henrique Gonçalves Bossle, sou estudante de Análise e Desenvolvimento de Sistemas e, atualmente, estou no 5º semestre do curso.</p>
+              <p className="p-text">Tenho como principais tecnologias PHP e Laravel para desenvolvimento de APIs, regras de negócio, autenticação, CRUDs e aplicações seguindo padrões como MVC. No frontend, utilizo principalmente React, JavaScript, HTML, CSS, Bootstrap e Tailwind CSS para criar interfaces dinâmicas e integradas às APIs.</p>
+              <p className="p-text">Atualmente, estou me aprofundando no desenvolvimento Full Stack com PHP, Laravel e React, buscando aprimorar minhas habilidades na construção de sistemas completos, seguros e bem estruturados.</p>
+            </div>
+            <div className="about-card__column">
+              <p className="p-text">Sou apaixonado por tecnologia e programação e tenho como principal objetivo atuar como desenvolvedor Full Stack, criando aplicações web completas, desde o desenvolvimento do backend até a construção de interfaces modernas e responsivas.</p>
+              <p className="p-text">Também possuo conhecimentos em bancos de dados, principalmente MySQL, além de experiência com APIs REST, Git, Docker, Postman, deploy e ferramentas como Render e Neon DB.</p>
+              <p className="p-text">Este site foi desenvolvido em React e funciona como meu portfólio, onde apresento alguns dos principais projetos que desenvolvi durante minha jornada de aprendizado e evolução como desenvolvedor.</p>
+            </div>
 </div>
         </section>
 
