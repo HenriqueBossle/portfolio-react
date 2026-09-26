@@ -10,6 +10,96 @@ function Home() {
   const techRef = useRef(null)
   const aboutRef = useRef(null)
   const projectsRef = useRef(null)
+  const starsRef = useRef(null)
+
+  useEffect(() => {
+    const canvas = starsRef.current
+    const context = canvas?.getContext("2d")
+    if (!canvas || !context) return
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)")
+    let width = 0
+    let height = 0
+    let animationFrame
+    let stars = []
+    let lastFrame = 0
+
+    const resize = () => {
+      const bounds = canvas.getBoundingClientRect()
+      const pixelRatio = Math.min(window.devicePixelRatio || 1, 2)
+      width = bounds.width
+      height = bounds.height
+      canvas.width = Math.round(width * pixelRatio)
+      canvas.height = Math.round(height * pixelRatio)
+      context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0)
+      stars = Array.from({ length: Math.max(42, Math.round((width * height) / 9000)) }, () => {
+        const speedX = (Math.random() - 0.5) * 0.12
+        const speedY = (Math.random() - 0.5) * 0.12
+        return {
+          x: Math.random() * width,
+          y: Math.random() * height,
+          radius: Math.random() * 0.8 + 0.45,
+          speedX,
+          speedY,
+          targetSpeedX: speedX,
+          targetSpeedY: speedY,
+          directionChangeIn: 500 + Math.random() * 2200,
+          phase: Math.random() * Math.PI * 2,
+        }
+      })
+      draw(0, true)
+    }
+
+    const draw = (time, staticFrame = false) => {
+      context.clearRect(0, 0, width, height)
+      const elapsed = staticFrame ? 0 : Math.min(time - lastFrame, 40)
+      lastFrame = time
+
+      if (!staticFrame) {
+        stars.forEach((star) => {
+          star.directionChangeIn -= elapsed
+          if (star.directionChangeIn <= 0) {
+            star.targetSpeedX = (Math.random() - 0.5) * 0.12
+            star.targetSpeedY = (Math.random() - 0.5) * 0.12
+            star.directionChangeIn = 700 + Math.random() * 2400
+          }
+          star.speedX += (star.targetSpeedX - star.speedX) * Math.min(1, elapsed * 0.0007)
+          star.speedY += (star.targetSpeedY - star.speedY) * Math.min(1, elapsed * 0.0007)
+          star.x = (star.x + star.speedX * elapsed + width) % width
+          star.y = (star.y + star.speedY * elapsed + height) % height
+        })
+      }
+
+      stars.forEach((star) => {
+        const twinkle = staticFrame ? 0.35 : 0.25 + Math.sin(time * 0.0007 + star.phase) * 0.12
+        context.beginPath()
+        context.arc(star.x, star.y, star.radius, 0, Math.PI * 2)
+        context.fillStyle = `rgba(220, 240, 255, ${twinkle})`
+        context.shadowColor = "rgba(93, 190, 255, 0.55)"
+        context.shadowBlur = star.radius * 3
+        context.fill()
+      })
+      context.shadowBlur = 0
+
+      if (!staticFrame && !reduceMotion.matches) animationFrame = window.requestAnimationFrame(draw)
+    }
+
+    const startAnimation = () => {
+      window.cancelAnimationFrame(animationFrame)
+      if (reduceMotion.matches) draw(0, true)
+      else animationFrame = window.requestAnimationFrame(draw)
+    }
+
+    resize()
+    startAnimation()
+    window.addEventListener("resize", resize)
+    reduceMotion.addEventListener("change", startAnimation)
+    return () => {
+      window.cancelAnimationFrame(animationFrame)
+      window.removeEventListener("resize", resize)
+      reduceMotion.removeEventListener("change", startAnimation)
+    }
+  }, [])
 
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth" })
@@ -45,6 +135,7 @@ function Home() {
       />
 
       <header className="header">
+        <canvas ref={starsRef} className="header__stars" aria-hidden="true" />
         <div className="header__main-info">
           <img className="header__photo" src={me} alt="Henrique Bossle" />
 
@@ -62,7 +153,7 @@ function Home() {
               <a className="btn btn--secondary" href="https://github.com/HenriqueBossle" target="_blank" rel="noreferrer">
                 GitHub
               </a>
-              <a className="btn btn--outline" href="../Curriculo_Henrique_Bossle_FullStack.pdf" target="_blank">
+              <a className="btn btn--outline" href="../Curriculo_Henrique_Bossle_PHP_Laravel_React_DB.pdf" target="_blank">
                 Meu Curriculo 
               </a>
             </div>
