@@ -39,6 +39,7 @@ const projects = [
         image: clienteObra3,
         fullDescription: "Terceiro sistema que fiz para gestão de clientes de construção civil, consiste em uma aplicação web com back-end em Laravel e front-end em React JS. O software conta com CRUD completo para registro de clientes, autenticação e separação de usuários, geração de pdf de um ou de todos os registros, filtro e pesquisa por obra, envio de email para cadastro e recuperação de conta e edição e exclusão de conta. O deploy foi feito com Render e Vercel e o sistema já está disponível para uso real.",
         techs: ["React", "Laravel", "Dompdf", "Brevo", "Neon DB", "Render"],
+        github: "https://github.com/HenriqueBossle/cliente-obra-api2-frontend",
         deploy: "https://cliente-obra-api2-frontend.vercel.app/"
     },
     {
