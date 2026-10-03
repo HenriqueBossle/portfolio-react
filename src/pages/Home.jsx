@@ -153,7 +153,7 @@ function Home() {
               <a className="btn btn--secondary" href="https://github.com/HenriqueBossle" target="_blank" rel="noreferrer">
                 GitHub
               </a>
-              <a className="btn btn--outline" href="../Henrique-Bossle-Desenvolvedor-Full-Stack_2.pdf" target="_blank">
+              <a className="btn btn--outline" href="../Henrique-Bossle-Desenvolvedor-Full-Stack[1].pdf" target="_blank">
                 Meu Curriculo 
               </a>
             </div>
@@ -164,7 +164,7 @@ function Home() {
           <h3 className="tech-bar__title">Tecnologias</h3>
           <div className="tech-bar__list">
             {[
-              "PHP", "Laravel", "React", "MySQL"
+              "PHP", "Laravel", "React", "MySQL", "PostgreSQL"
             ].map((tech, index) => (
               <div key={index} className="tech-bar__item" style={{ "--badge-index": index }}>
                 {tech}
@@ -185,7 +185,7 @@ function Home() {
             </div>
             <div className="about-card__column">
               <p className="p-text">Sou apaixonado por tecnologia e programação e tenho como principal objetivo atuar como desenvolvedor Full Stack, criando aplicações web completas, desde o desenvolvimento do backend até a construção de interfaces modernas e responsivas.</p>
-              <p className="p-text">Também possuo conhecimentos em bancos de dados, principalmente MySQL, além de experiência com APIs REST, Git, Docker, Postman, deploy e ferramentas como Render e Neon DB.</p>
+              <p className="p-text">Também possuo conhecimentos em bancos de dados, principalmente MySQL e PostgreSQL, além de experiência com APIs REST, Git, Docker, Postman, deploy, NeuronAI (para desenvolvimento de IA com PHP) e ferramentas como Render e Neon DB.</p>
               <p className="p-text">Este site foi desenvolvido em React e funciona como meu portfólio, onde apresento alguns dos principais projetos que desenvolvi durante minha jornada de aprendizado e evolução como desenvolvedor.</p>
             </div>
 </div>
