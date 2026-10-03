@@ -7,3 +7,5 @@
 .header__name{color:#fff;background:none;-webkit-text-fill-color:#fff;filter:none}
 
 .header__stars{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.9}
+
+.header__photo{background:#168cff}

@@ -87,7 +87,7 @@ const projects = [
         description: "Sistema de gerenciamento de obras de construção civil feito com Laravel e estilizado com Tailwind CSS.",
         image: clienteObra,
         fullDescription: "Sistema de gestão e organização de clientes de obras de construção civil. O software feito em Laravel conta com CRUD completo, autenticação de usuarios, geração de PDF de todos os regsitros ou de um registro só e pesquisa por filtro.",
-        techs: ["Laravel", "Dompdf", "Tailwind CSS", "MySQL"],
+        techs: ["Laravel", "Blade", "Dompdf", "Tailwind CSS", "MySQL"],
         github: "https://github.com/HenriqueBossle/ClienteObra",
        
 
@@ -98,7 +98,7 @@ const projects = [
         description: "Outro sistema de gerenciamento de personagens feito somente com Laravel.",
         image: fictionGrid,
         fullDescription: "Aplicação web feita em Laravel de gerenciamento de personagens com CRUD completo, filtro por franquia do personagens, estilização com Tailwind CSS e autenticação de usuários. O banco de dados foi hospedado no Neon DB e o projeto no Render.",
-        techs: ["Laravel", "Tailwind CSS", "Neon DB"],
+        techs: ["Laravel", "Blade", "Tailwind CSS", "Neon DB"],
         github: "https://github.com/HenriqueBossle/fiction_grid",
         deploy: "https://fiction-grid-1.onrender.com/"
     },
@@ -118,7 +118,7 @@ const projects = [
         description: "Aplicação web em Laravel sobre HQs de super-heróis.",
         image: hqhero,
         fullDescription: "Site de gerenciamento de HQs feito com Laravel 12. Possui pesquisa com filtro e relação entre as tabelas categoria e HQ.",
-        techs: ["Laravel", "Tailwind"],
+        techs: ["Laravel", "Blade", "Tailwind"],
         github: "https://github.com/HenriqueBossle/gerenciador-de-comics"
     },
     {
@@ -127,7 +127,7 @@ const projects = [
         description: "Meu primeiro sistema de gestão de clientes de construção civil.",
         image: gerenciador,
         fullDescription: "Aplicação web de CRUD completo feita com Laravel 11. Possui gerador de PDF, pesquisa com filtro e autenticação com Laravel.",
-        techs: ["Laravel", "Dompdf", "Tailwind", "MySQL"],
+        techs: ["Laravel", "Blade", "Dompdf", "Tailwind", "MySQL"],
         github: "https://github.com/HenriqueBossle/sistema-cadastro-obras",
     },
 ]
