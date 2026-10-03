@@ -164,7 +164,7 @@ function Home() {
           <h3 className="tech-bar__title">Tecnologias</h3>
           <div className="tech-bar__list">
             {[
-              "PHP", "Laravel", "React", "MySQL", "PostgreSQL"
+              "PHP", "Laravel", "React", "API Rest", "MySQL", "PostgreSQL"
             ].map((tech, index) => (
               <div key={index} className="tech-bar__item" style={{ "--badge-index": index }}>
                 {tech}
