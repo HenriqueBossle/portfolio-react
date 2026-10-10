@@ -143,7 +143,7 @@ function Home() {
             <h1 className="header__name">Henrique Bossle</h1>
             <h2 className="header__role">Desenvolvedor Full-Stack</h2>
             <p className="header__slogan">
-              Criando soluções digitais com design e resultado.
+              APIs em Laravel e interfaces em React, publicadas em produção.
             </p>
 
             <div className="header__buttons">
@@ -153,7 +153,7 @@ function Home() {
               <a className="btn btn--secondary" href="https://github.com/HenriqueBossle" target="_blank" rel="noreferrer">
                 GitHub
               </a>
-              <a className="btn btn--outline" href="../Henrique-Bossle-Desenvolvedor-Full-Stack[1].pdf" target="_blank">
+              <a className="btn btn--outline" href="../Henrique-Bossle-Desenvolvedor-Full-Stack_new_estagio.pdf" target="_blank">
                 Meu Curriculo 
               </a>
             </div>
